@@ -1,0 +1,165 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html{
+    scroll-behavior: smooth;
+}
+
+body{
+    background: #040714;
+    color: white;
+    font-family: 'Arial Narrow', Arial, sans-serif;
+}
+a{
+    color: white;
+    text-decoration:  none;
+}
+.pageContainer{
+    width: 100vw;
+    height: 100vh;
+    position: relative;
+    overflow: hidden;
+    background-position: center;
+    background-size:  cover;
+    background-repeat: no-repeat;
+    margin-top: 70px;
+
+}
+
+.pageContainer > img{
+    min-width:  100%;
+    object-fit:  contain;
+    z-index: -1;
+}
+.other{
+    height: 100%;
+    position: absolute;
+    width: 50%;
+    top: 0;
+    left: 0;
+    z-index:  1;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+.other-image > img {
+    max-width: 400px;
+    object-fit:  contain;
+}
+.btn-container{
+ align-self: flex-start;
+ margin-left: 30px;
+ display: flex;
+ gap: 1rem;
+}
+.btn-container > button{
+    padding:  10px;
+    display: flex;
+    align-items: center;
+    border-radius: 4px;
+    border: none;
+    gap: 1rem;
+    outline: none;
+}
+.btn-container > button:hover{
+    background: rgba(255, 255, 255, 0.5);
+}
+
+.btn-container > button > span{
+    text-transform: uppercase;
+    font-weight: 700;
+    font-size: 18px;
+}
+.text-container{
+    margin-top: 15px;
+    font-weight: 700;
+    margin-left: 30px;
+    text-transform: capitalize;
+    line-height:  1.2;
+}
+.text-container > p{
+    font-family: monospace;
+    padding: 10px 0px;
+    margin-bottom:  15px;
+    font-size: 20px;
+    word-wrap: none;
+    -ms-word-break: keep-all;
+}
+.text-container > h3{
+    padding: 5px 0px;
+    font-family: monospace;
+    word-spacing: 3px;
+    letter-spacing:  1px;
+     word-wrap: none;
+    -ms-word-break: keep-all;
+    
+
+}
+
+@media only screen and (max-width: 679px) {
+            body{
+        font-size: 13px;
+    }
+    .other{
+        width: 100vw;
+        justify-content: center;
+        align-items: center;
+    }
+.pageContainer > img{
+    object-fit:  cover;
+}
+.other-image > img {
+    width: 100%;
+  object-fit:  contain;
+}
+.btn-container{
+    width: 100vw;
+ align-self: center;
+margin-left: 10px;
+ display: flex;
+ gap: 0.5rem;
+}
+.btn-container > button{
+    padding: 5px 15px;
+    gap: 1rem;
+    
+}
+.btn-container > button > span{
+    font-size: 12px;
+}
+.text-container{
+    width: 100%;
+    margin-top: 10px;
+    margin-left: 0px;
+    margin-left: 10px;
+}
+.text-container > p{
+    padding: 5px 0px;
+    margin-bottom:  10px;
+    font-size: 17px;
+}
+.text-container > h3{
+    width: 100%;
+    padding: 8px 0px;
+    letter-spacing:  1.5px;
+}
+}
+@media only screen and (min-width: 768px) {
+    body{
+        font-size: 16px;
+    }
+
+    
+}
+
+    @media only screen and (min-width: 480px) and (max-width: 768px){
+        body{
+        font-size: 14px;
+        
+    }
+}
+
