@@ -8,7 +8,7 @@ import { useSelector, useDispatch} from 'react-redux'
 import { selectLogin, login, logout } from '../features/userSlice'
 import { auth, provider } from '../firebase'
 import Avatar from 'react-avatar'
-import { useHistory } from 'react-router-dom'
+import { useHistory, Link } from 'react-router-dom'
 
 
 
@@ -38,13 +38,15 @@ function Header() {
 
         const handleLogOut = () => {
             auth.signOut()
+            .then(() => console.log('you are logout'))
             dispatch(logout())
         }
     return (
         <HeaderWrapper>
-                <Logo>
+
+               <Link to='/home' > <Logo>
             <img src='/img/images/logo.svg' alt="Logo_image" />
-             </Logo>
+             </Logo></Link>
 { user ?
                 <HomeContainer>
                     <HeaderIcon icon={<MdHome /> } text='Home' />
